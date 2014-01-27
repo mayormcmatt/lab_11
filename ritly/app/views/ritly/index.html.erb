@@ -1,0 +1,19 @@
+<head>
+<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+
+<h1 class="title">Ritly!</h1>
+
+	<div class="form"><i class="fa fa-link fa-2x"></i><%= form_for :link_code, url: "/go/show", method: :post do |f| %>
+		<div class="form_field"><%= f.text_field :link, placeholder: "Generate Link" %></div>
+		<%= f.hidden_field :random_string, :value =>SecureRandom.urlsafe_base64(10) %><br>
+		<div class="submit"><%= f.submit "Submit Link" %></div>
+	<% end %>
+	</div>
+
+	<%= debug(session) if Rails.env.development? %>
+
+</body>

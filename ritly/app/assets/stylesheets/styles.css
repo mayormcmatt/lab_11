@@ -1,0 +1,58 @@
+body {
+	margin: 0 auto;
+	width: 960px;
+	background: #2f87a7;
+}
+
+.title {
+	text-align: center;
+	margin: 100px 0px 100px 0px;
+	color: black;
+	font-family: 'Cedarville Cursive', cursive;
+	font-size:8em;
+}
+
+.show_title {
+	font-size: 4em;
+	font-family: 'Cedarville Cursive', cursive;
+}
+
+.form {
+	width: 300px;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
+	display: block;
+}
+
+.form_field {
+	text-align: center;
+}
+
+input {
+	width: 300px;
+	text-align: center;
+}
+
+.submit {
+	text-indent: -9999px;
+}
+
+.links {
+	text-align: center;
+}
+
+.label {
+	font-family: 'Cedarville Cursive', cursive;
+	font-size: 1.5em;
+}
+
+a, a:link, a:active, a:visited, a:hover {
+	font-size: 1.2em;
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}

@@ -1,0 +1,14 @@
+<head>
+<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<h1 class="show_title"><a href="http://localhost:3000/go">Ritly!</a></h1>
+
+<div class="links">
+	
+	<div><p class="label">Your link: </p><%= @link.link %> </div><br>
+	<div><p class="label">Link code: </p><%=@link.random_string%></a></div><br>
+	<div><a href="http://localhost:3000/<%=@link.random_string%>">Click here to visit site, or copy the address and paste it into your address bar</a>
+
+</div>
