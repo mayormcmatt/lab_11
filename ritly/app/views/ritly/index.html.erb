@@ -5,6 +5,18 @@
 
 <body>
 
+<ul class="nav pull-right">
+	<% if signed_in? %>
+		<li><%= link_to "My profile", current_user %></li>
+		<li>
+			<%= link_to "Sign out", signout_path, method: "delete" %>
+		</li>
+	<% else %>
+		<li><%= link_to "Sign up", "/go/signup" %></li>
+		<li><%= link_to "Sign in", "/go/signin" %></li>
+	<% end %>
+</ul>
+
 <h1 class="title">Ritly!</h1>
 
 	<div class="form"><i class="fa fa-link fa-2x"></i><%= form_for :link_code, url: "/go/show", method: :post do |f| %>

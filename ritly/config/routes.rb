@@ -1,13 +1,21 @@
 Ritly::Application.routes.draw do
 
-  root to: "ritly#index"
+	resources :users, :sessions
 
-  get "/go", to: "ritly#index", as: :go
+	root to: "ritly#index"
 
-  get "/go/:id", to: "ritly#show", as: :link
+	get "/go", to: "ritly#index"
 
-  get  "/:random_string", to: "ritly#redirect"
+	get '/go/signup', to: 'users#new'
 
-  post "/go/show", to: "ritly#create"
-  
+	delete '/signout', to: 'sessions#destroy'
+
+	get '/go/signin', to: 'sessions#new'
+
+	get "/go/:id", to: "ritly#show"
+
+	get  "/:random_string", to: "ritly#redirect"
+
+	post "/go/show", to: "ritly#create"
+
 end

@@ -1,0 +1,18 @@
+<head>
+<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<h1>Sign Up!</h1>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for (@user) do |f| %>
+			<%= f.text_field :name, placeholder: "Enter Username" %>
+			<%= f.text_field :email, placeholder: "Enter Email" %>
+			<%= f.password_field :password, placeholder: "Enter Password" %>
+			<%= f.password_field :password_confirmation, placeholder: "enter password again" %>
+			<%= f.submit "Create Account!" %>
+		<% end %>
+	</div>
+</div>
